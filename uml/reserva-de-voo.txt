@@ -1,0 +1,18 @@
+Classes principais: Voo, Passageiro, Reserva, 
+Assento (Lugar) e Pagamento.
+
+Descrição e Relacionamentos:
+    Composição: Existe uma relação de composição forte entre Voo e 
+    Assento. Um voo é composto por vários assentos específicos para 
+    aquela viagem. Se o voo for cancelado e removido do sistema, os 
+    assentos associados àquele voo específico também deixam de existir.
+
+    Dependência: A classe Reserva tem uma dependência com a classe de 
+    serviço Pagamento (ou uma interface de gateway de pagamento). 
+    Para que a reserva seja confirmada e o estado alterado, ela depende
+    do processamento bem-sucedido do pagamento.
+    
+    Associações:
+        Um Passageiro pode fazer várias Reservas (1 para N).
+        Uma Reserva está associada a um único Voo (N para 1) e 
+        inclui um ou mais Assentos (1 para N).

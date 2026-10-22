@@ -1,0 +1,22 @@
+Classes principais: Pessoa (Classe Base), Paciente, Médico, 
+Consulta e ReceitaMedica.
+
+Descrição e Relacionamentos:
+    Herança: As classes Paciente e Médico herdam de uma 
+    superclasse Pessoa (contendo nome, data de nascimento, 
+    NIF/Cartão de Cidadão, morada). A classe Paciente adiciona 
+    atributos como número de utente e histórico clínico. A classe 
+    Médico adiciona especialidade e cédula profissional.
+
+    Associações:
+        Um Paciente pode ter várias Consultas ao longo do tempo (1 para N).
+        Um Médico realiza várias Consultas (1 para N).
+        A classe central aqui é a Consulta, que atua como uma classe 
+        associativa (ou entidade de ligação) entre Paciente e Médico, 
+        contendo atributos próprios como data, hora, sala e diagnóstico.
+    
+    Composição/Agregação: Uma Consulta pode gerar uma ReceitaMedica. 
+    Esta relação pode ser vista como uma composição 
+    (1 para 0..1 ou 1..N), onde a receita só existe no contexto 
+    daquela consulta específica. A receita conterá a lista de 
+    medicamentos prescritos e as dosagens.

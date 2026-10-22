@@ -1,0 +1,26 @@
+Descrição detalhada do projeto:
+O sistema será composto por três módulos principais: uma Aplicação 
+Móvel para o Motorista, uma Plataforma Web/Mobile para o Cliente/Gestor
+e um Backend Centralizado.
+
+App do Motorista: Terá acesso contínuo ao GPS do dispositivo. 
+Quando o motorista inicia a rota de uma carga, a aplicação envia as 
+coordenadas de geolocalização para o servidor em intervalos curtos 
+(ex: a cada 10 segundos) através de uma ligação persistente (como WebSockets).
+
+Backend: Processará os dados recebidos, armazenará o histórico de 
+localizações numa base de dados espacial e fará o cálculo dinâmico de 
+rotas e do tempo estimado de chegada (ETA) usando APIs de mapas 
+(como Google Maps ou Mapbox).
+
+Plataforma do Cliente: O cliente receberá um código de rastreamento 
+(tracking). Ao aceder à plataforma, verá um mapa interativo onde o 
+ícone do veículo se move em tempo real.
+
+Notificações e Eventos: O sistema contará com Push Notifications ou 
+SMS automáticos baseados em geofencing (cercas virtuais). Quando o 
+motorista entrar num raio de 2 km do destino, o cliente é 
+notificado: "A sua entrega está quase a chegar". O motorista finaliza 
+a entrega na app com uma assinatura digital ou fotografia do 
+comprovativo, alterando imediatamente o estado da encomenda 
+no sistema central.

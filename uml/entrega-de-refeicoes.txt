@@ -1,0 +1,23 @@
+Classes principais: User(Classe base), Cliente, Entregador, 
+Restaurante, Pedido e ItemPedido.
+
+Descrição e relacionamentos:
+    Herança: Podemos criar uma superclasse abstrata chamada User
+    que contém atributos comuns (nome, email, palavra-passe, telefone).
+    As classes Cliente e Entregador herdam essa classe
+
+    Composição: A classe Pedido possui uma relação de composição 
+    com a classe ItemPedido. Um pedido é formado por vários itens
+    (pratos/ bebidas). Se o pedido for cancelado e apagado do sistema,
+    os itens desse pedido específico também deixam de existir de forma
+    independente.
+
+    Associações:
+        Um Cliente pode realizar múltiplos Pedidos (relação 1 para N).
+        Um Restaurante recebe múltiplos Pedidos (relação 1 para N).
+        Um Entregador é atribuído a um ou mais Pedidos para realizar 
+        a entrega (relação 1 para N).
+
+    Atributos e Métodos: O Pedido terá atributos como estado (pendente, 
+    em preparação, a caminho, entregue), total, e métodos como 
+    atualizarEstado().
