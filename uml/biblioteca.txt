@@ -1,0 +1,9 @@
+Classes principais: Livro, Autor, Utilizador e Empréstimo
+Associações e Multiplicidade:
+    Autor e Livro: Um Autor pode escrever múltiplos Livros (multiplicidade 1..
+para N). Um Livro pode ter um ou mais Autores (multiplicidade 1 para N)
+    Utilizador e Empréstimos: Um Utilizador realiza vários Empréstimos ao longo 
+do tempo (multiplicidade 1 para N);
+    Empréstimo e Livro: Um Empréstimo está associado a uma ou mais cópias de 
+Livros (multiplicidade 1 para N). Uma cópia física específica de um livro só 
+pode estar associada a um Empréstimo ativo num dado momento.
