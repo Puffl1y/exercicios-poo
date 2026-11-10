@@ -1,0 +1,13 @@
+Arquitetura e Fluxo de funcionamento:
+    Plataforma de Venda (online): O cliente acessa o portal web ou aplicação
+móvel para comprar o bilhete. Após a aprovação do pagamento, o sistema backend
+gera um identificador único encriptado, transformado num código QR dinamico.
+    Distribuição: O bilhete digital com o código QR é enviado para o email do 
+cliente e fica acessível na aplicação do evento.
+    Validação da Entrada (local): Os assistentes do evento utilizam terminais 
+portáteis (PDAs) ou telemóveis com uma aplicação de leitura ótica. Ao digitaliza
+o código QR, a aplicação comunica em tempo real via rede com base de dados 
+central.
+    Sincronização: O sistema verifica instantaneamente se o código é autentico e
+se já foi utilizado. Se for válido, registra na hora de entrada e invalida o 
+código no sistema central, impossibilitando fraudes ou duplicação de entrada.
